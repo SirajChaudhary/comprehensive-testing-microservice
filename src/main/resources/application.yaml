@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: comprehensive-testing-microservice
+
+  profiles:
+    active: dev   # default profile
+
+external:
+  base-url: http://localhost

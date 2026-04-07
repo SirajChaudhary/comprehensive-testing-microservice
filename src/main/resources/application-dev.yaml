@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: dev   # dev profile (PostgreSQL)
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banking_db
+    username: postgres
+    password: siraj123
+
+  jpa:
+    hibernate:
+      ddl-auto: none   # use schema.sql
+    defer-datasource-initialization: true   # run schema.sql before data.sql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  sql:
+    init:
+      mode: always   # run schema.sql + data.sql
+
+server:
+  port: 8080
